@@ -334,6 +334,22 @@ html.no-js .astep{opacity:1;min-height:auto;padding-block:24px}
 .w-f{grid-column:span 5;grid-row:span 2}
 .w-g{grid-column:span 7;grid-row:span 2}
 
+/* --- Before/After comparison slider (real client transformation) --- */
+.ba-block{margin-bottom:18px}
+.ba{position:relative;aspect-ratio:1360/980;max-height:640px;margin-inline:auto;border-radius:var(--r);overflow:hidden;background:var(--slate-800);user-select:none;touch-action:pan-y;box-shadow:var(--shadow)}
+.ba-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.ba-before{clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
+.ba-tag{position:absolute;top:16px;z-index:4;padding:.42em .85em;border-radius:999px;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;backdrop-filter:blur(4px);pointer-events:none}
+.ba-tag-b{left:16px;background:rgba(18,22,28,.62);color:#fff}
+.ba-tag-a{right:16px;background:var(--patina);color:#fff}
+.ba-line{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;background:rgba(255,255,255,.92);transform:translateX(-1px);z-index:5;pointer-events:none}
+.ba-grip{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.4)}
+.ba-grip svg{width:22px;height:22px}
+.ba-range{position:absolute;inset:0;width:100%;height:100%;margin:0;padding:0;opacity:0;cursor:ew-resize;z-index:6}
+.ba-range:focus-visible{outline:none}
+.ba-range:focus-visible~.ba-line .ba-grip{box-shadow:0 0 0 4px var(--patina-glow),0 6px 20px rgba(0,0,0,.4)}
+.ba-cap{margin-top:13px;font-size:.85rem;color:var(--tod-mute);text-align:center;letter-spacing:.03em}
+
 /* ============================================================
    WHY US / STORY
    ============================================================ */

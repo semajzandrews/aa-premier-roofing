@@ -128,6 +128,15 @@
     ScrollTrigger.refresh();
   }
 
+  /* ---------- Before/After comparison sliders ---------- */
+  document.querySelectorAll(".ba").forEach(function (ba) {
+    var r = ba.querySelector(".ba-range");
+    if (!r) return;
+    var upd = function () { ba.style.setProperty("--pos", r.value + "%"); };
+    r.addEventListener("input", upd);
+    upd();
+  });
+
   /* ---------- Lead form (CRM-ready) ---------- */
   var form = document.getElementById("leadForm");
   if (form) {
