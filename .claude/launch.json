@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "aa-roofing",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8117", "--directory", "/Users/sandrews/.hermes/projects/AI_SOFTWARE_FACTORY/builds/aa-premier-roofing"],
+      "port": 8117
+    }
+  ]
+}
