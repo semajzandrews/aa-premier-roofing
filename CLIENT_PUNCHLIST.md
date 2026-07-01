@@ -2,6 +2,12 @@
 
 The front end is a complete, sale-in-hand demo. Everything below is **real-client data to confirm/supply before going live**. Nothing here blocks showing the demo. Items are honest placeholders, not invented facts.
 
+## Recon update (07-01-2026) — folded in from their live site
+- DONE: **Real before/after slider** using their own home transformation (roof + exterior). Ask Anthony & Ashton for MORE before/after pairs and I'll add them.
+- DONE: **Real owner/crew photo** in the story section (pulled from their site). Confirm it's OK to use and send a higher-res copy if they have one.
+- CONFIRM: **Socials.** Their current site's social icons are unconfigured Wix template defaults (they point to @wix, not them). Ours link Instagram @aaconsultingtx + a Facebook page found via search. Have them confirm those are really theirs, or I omit them.
+- CONTEXT: their live site is a near-stock Wix "general contracting" template. Only real interactive feature was Wix Bookings (pick a service + time). Our lead form covers that intent; can add a "preferred time" field to match it exactly. Their portfolio + blog were template filler (skipped).
+
 ## Must confirm (accuracy / trust)
 1. **Reviews** — the 3 testimonials are clearly-marked SAMPLES (Marcus T./Plano, Denise R./Fort Worth, James & Carla/McKinney). Replace with real Google/Facebook reviews (name + quote + city). Section is built to hold real ones as-is.
 2. **Credentials** — the badges claim "Licensed & Insured" and "Workmanship Warranty." Confirm both are accurate and add the real license #, insurance, and warranty terms. Remove/adjust any that don't apply.
