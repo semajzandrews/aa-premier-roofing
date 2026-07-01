@@ -160,20 +160,21 @@ html.no-js .reveal{opacity:1;transform:none}
 .nav.scrolled{background:rgba(18,22,28,.82);backdrop-filter:blur(14px) saturate(1.2);border-bottom-color:var(--line-d)}
 .brand{display:flex;align-items:center;gap:12px;color:var(--tod)}
 .brand .mark{width:38px;height:38px;flex:none}
-.brand-txt{display:flex;flex-direction:column;line-height:1}
-.brand-name{font-family:var(--font-display);font-weight:800;font-size:1.02rem;letter-spacing:.01em}
-.brand-sub{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--tod-mute);margin-top:3px}
-.nav-links{display:flex;align-items:center;gap:clamp(18px,2vw,34px)}
+.brand-txt{display:flex;flex-direction:row;align-items:center;gap:11px;line-height:1}
+.brand-name{font-family:var(--font-display);font-weight:800;font-size:1.08rem;letter-spacing:.01em;white-space:nowrap}
+.brand-sub{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--tod-mute);padding-left:11px;border-left:1px solid var(--line-d);white-space:nowrap}
+@media (max-width:1160px){.brand-sub{display:none}}
+.nav-links{display:flex;align-items:center;gap:clamp(14px,1.6vw,26px)}
 .nav-link{
-  position:relative;font-weight:500;font-size:.96rem;color:var(--tod);padding-block:6px;opacity:.9;
+  position:relative;font-weight:500;font-size:.96rem;color:var(--tod);padding-block:6px;opacity:.9;white-space:nowrap;
 }
 .nav-link::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1.5px;background:var(--patina-glow);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
 .nav-link:hover{opacity:1}
 .nav-link:hover::after{transform:scaleX(1)}
 .nav-actions{display:flex;align-items:center;gap:18px}
-.nav-phone{display:inline-flex;align-items:center;gap:.5em;font-weight:700;font-size:.96rem;color:var(--tod)}
+.nav-phone{display:inline-flex;align-items:center;gap:.5em;font-weight:700;font-size:.96rem;color:var(--tod);white-space:nowrap}
 .nav-phone svg{width:1.05em;height:1.05em;color:var(--patina-glow)}
-.nav .btn{padding:.72rem 1.2rem;font-size:.92rem}
+.nav .btn{padding:.72rem 1.2rem;font-size:.92rem;white-space:nowrap}
 .nav-burger{display:none;background:none;border:0;color:var(--tod);cursor:pointer;padding:6px}
 
 /* mobile menu */
