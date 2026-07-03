@@ -147,6 +147,29 @@
     upd();
   });
 
+  /* ---------- Online booking (dormant until data-booking-url is set) ---------- */
+  var bookingUrl = document.body.getAttribute("data-booking-url");
+  if (bookingUrl) {
+    var mkBook = function (cls, label) {
+      var a = document.createElement("a");
+      a.href = bookingUrl; a.target = "_blank"; a.rel = "noopener";
+      a.className = cls; a.textContent = label || "Book a time online";
+      return a;
+    };
+    var heroCta = document.querySelector(".hero-cta");
+    if (heroCta) heroCta.appendChild(mkBook("btn btn--lg btn--ghost"));
+    var stormCard = document.querySelector(".storm-card");
+    if (stormCard) { var sb = mkBook("btn btn--ghost btn--block"); sb.style.marginTop = "12px"; stormCard.appendChild(sb); }
+    var formSmall = document.querySelector(".form-body small");
+    if (formSmall) {
+      var alt = document.createElement("p");
+      alt.className = "book-alt";
+      alt.appendChild(document.createTextNode("Prefer to pick a time yourself? "));
+      alt.appendChild(mkBook("", "Book online"));
+      formSmall.parentNode.insertBefore(alt, formSmall);
+    }
+  }
+
   /* ---------- Lead form (CRM-ready) ---------- */
   var form = document.getElementById("leadForm");
   if (form) {

@@ -453,6 +453,8 @@ html.no-js .astep{opacity:1;min-height:auto;padding-block:24px}
 .field textarea{resize:vertical;min-height:92px}
 .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .form small{display:block;margin-top:8px;color:var(--tol-mute);font-size:.8rem}
+.book-alt{margin-top:16px;font-size:.92rem;text-align:center;color:var(--tol-mute)}
+.book-alt a{color:var(--patina);font-weight:700;text-decoration:underline;text-underline-offset:3px}
 .form-ok{display:none;text-align:center;padding:20px 0}
 .form-ok.show{display:block}
 .form-ok svg{width:54px;height:54px;color:var(--patina);margin:0 auto 14px}
