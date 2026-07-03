@@ -45,6 +45,10 @@ Deliberately NOT the loud contractor red/blue/orange every DFW roofer uses, and 
 ## CRM hookup (the friend's ask)
 Lead form `#leadForm` is webhook-ready. When `data-crm-endpoint` is set to a JobNimbus / AccuLynx / Zapier (or Formspree) URL, it POSTs the lead as JSON: `{name, phone, email, address, service, preferredDate, preferredTime, message, source, submittedAt}`. Currently empty → shows the same-day-callback success state client-side. See CLIENT_PUNCHLIST.md.
 
+## 07-03-2026 anatomy redesign (live in prod)
+- Signature illustration reworked from an abstract horizontal isometric slab into a **pitched gable-roof cutaway on a house** (gable wall + attic window as always-visible context; layers build up the two slopes; numbered pins ride the left slope 1→base to 5→ridge). Reads unmistakably as a roof now. Same GSAP scroll-build + reduced-motion/`?static` fallback; `.roof-layer[data-layer]` / `.roof-label[data-layer]` contract unchanged so JS was untouched. Client feedback: old version "looked a little off / abstract."
+- Lenis scroll lerp raised .11 → .18 (snappier, less floaty) per client feedback. Open decision: keep tuned-smooth vs revert to native scroll (restores macOS overscroll bounce the client misses).
+
 ## 07-03-2026 polish pass (live in prod)
 - Anatomy SVG viewBox cropped to ink (`52 192 478 224`), pins re-spaced (r=12), radial patina aura behind the slab — illustration now fills the sticky stage.
 - Lead form: optional preferred-day (native date) + best-time select = Wix Bookings parity; holiday lighting + junk removal added to the service dropdown (old-site bookable services).
