@@ -163,7 +163,11 @@ html.no-js .reveal{opacity:1;transform:none}
 .brand-txt{display:flex;flex-direction:row;align-items:center;gap:11px;line-height:1}
 .brand-name{font-family:var(--font-display);font-weight:800;font-size:1.08rem;letter-spacing:.01em;white-space:nowrap}
 .brand-sub{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--tod-mute);padding-left:11px;border-left:1px solid var(--line-d);white-space:nowrap}
-@media (max-width:1160px){.brand-sub{display:none}}
+/* the full nav row (brand+sub / 5 links / phone+CTA) needs ~1310px of nowrap content;
+   shed pieces before flex-shrink can force an overlap (seen in Safari ~1370px) */
+@media (max-width:1400px){.brand-sub{display:none}}
+@media (max-width:1080px){.nav-phone{display:none}}
+.brand,.nav-links,.nav-actions{flex-shrink:0;min-width:0}
 .nav-links{display:flex;align-items:center;gap:clamp(14px,1.6vw,26px)}
 .nav-link{
   position:relative;font-weight:500;font-size:.96rem;color:var(--tod);padding-block:6px;opacity:.9;white-space:nowrap;
