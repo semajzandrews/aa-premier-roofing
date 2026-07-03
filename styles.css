@@ -496,6 +496,19 @@ html.no-js .astep{opacity:1;min-height:auto;padding-block:24px}
 .foot-legal a{color:var(--tod-mute);font-size:.85rem}
 .foot-legal a:hover{color:var(--patina-glow)}
 
+/* blog */
+.blog-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
+@media (max-width:760px){.blog-grid{grid-template-columns:1fr}}
+.post-card{display:block;padding:30px 28px 32px;border-radius:var(--r);background:var(--bone);border:1px solid var(--line);transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.post-card:hover{transform:translateY(-5px);box-shadow:0 28px 48px -30px rgba(20,30,40,.4)}
+.post-kicker{font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--patina-bright)}
+.post-card h2{font-size:1.4rem;margin:12px 0 10px;line-height:1.15}
+.post-card p{color:var(--tol-mute);font-size:.97rem;line-height:1.6}
+.post-meta{display:block;margin-top:16px;font-size:.82rem;color:var(--tol-mute)}
+.post-more{display:inline-block;margin-top:14px;font-weight:700;color:var(--patina)}
+.article-wrap{max-width:720px}
+.article-wrap .lede-in{font-size:1.12rem;line-height:1.65;opacity:.92;margin-bottom:26px}
+
 /* ============================================================
    RESPONSIVE
    ============================================================ */
