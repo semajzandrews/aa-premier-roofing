@@ -35,7 +35,8 @@
   /* ---------- Smooth scroll (Lenis) + GSAP sync ---------- */
   var lenis = null;
   if (!reduce && window.Lenis) {
-    lenis = new Lenis({ duration: 1.1, smoothWheel: true, lerp: 0.11 });
+    // lerp raised from .11 -> .18 so the wheel feels snappier and less "floaty" (client feedback)
+    lenis = new Lenis({ smoothWheel: true, lerp: 0.18, wheelMultiplier: 1, touchMultiplier: 1.6 });
     window.__lenis = lenis;
     if (hasGSAP) {
       lenis.on("scroll", ScrollTrigger.update);
