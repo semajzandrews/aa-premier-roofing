@@ -43,7 +43,14 @@ Deliberately NOT the loud contractor red/blue/orange every DFW roofer uses, and 
 - motion_vocab: IntersectionObserver reveal (fade+rise), GSAP scroll-tied layer build, hover lifts, nav underline draw. Ease `cubic-bezier(.33,1,.68,1)` (not the monoculture eases).
 
 ## CRM hookup (the friend's ask)
-Lead form `#leadForm` is webhook-ready. When `data-crm-endpoint` is set to a JobNimbus / AccuLynx / Zapier (or Formspree) URL, it POSTs the lead as JSON: `{name, phone, email, address, service, message, source, submittedAt}`. Currently empty → shows the same-day-callback success state client-side. See CLIENT_PUNCHLIST.md.
+Lead form `#leadForm` is webhook-ready. When `data-crm-endpoint` is set to a JobNimbus / AccuLynx / Zapier (or Formspree) URL, it POSTs the lead as JSON: `{name, phone, email, address, service, preferredDate, preferredTime, message, source, submittedAt}`. Currently empty → shows the same-day-callback success state client-side. See CLIENT_PUNCHLIST.md.
+
+## 07-03-2026 polish pass (live in prod)
+- Anatomy SVG viewBox cropped to ink (`52 192 478 224`), pins re-spaced (r=12), radial patina aura behind the slab — illustration now fills the sticky stage.
+- Lead form: optional preferred-day (native date) + best-time select = Wix Bookings parity; holiday lighting + junk removal added to the service dropdown (old-site bookable services).
+- Mobile sticky action bar `#mobBar` (Call now / Free inspection), shows past 0.7×viewport scroll, ≤760px only, safe-area padded.
+- SEO: RoofingContractor JSON-LD (honest fields only), canonical + og:url/og:image/twitter card — absolute URLs on the vercel domain until cutover.
+- Perf: `loading="lazy" decoding="async"` on all below-fold imgs; phones swap to `hero-360.mp4`; Save-Data shows poster via `.hero.no-video`.
 
 ## Review
 `?static` query param renders the page fully-visible with native scroll (Lenis + reveal animations off) for the static-review harness / QA. Verified desktop (1440) + mobile (375): hero, nav/mobile-menu, services, signature (both breakpoints), storm, work, story, reviews, service area, lead form (submit + success), footer.

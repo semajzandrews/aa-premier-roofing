@@ -2,6 +2,13 @@
 
 The front end is a complete, sale-in-hand demo. Everything below is **real-client data to confirm/supply before going live**. Nothing here blocks showing the demo. Items are honest placeholders, not invented facts.
 
+## Update (07-03-2026) — pre-send polish pass, deployed to production
+- DONE: **Booking parity with their old Wix site.** Lead form now has optional "Preferred day" + "Best time" fields (covers the Wix Bookings pick-a-date intent), and the service dropdown now includes **Holiday lighting** and **Junk removal** (both were bookable services on their old site). Webhook payload now posts `{name, phone, email, address, service, preferredDate, preferredTime, message, source, submittedAt}`.
+- DONE: **Mobile sticky action bar** (Call now + Free inspection) slides in after the hero on phones, where the nav phone/CTA collapse behind the burger.
+- DONE: **Roof-anatomy stage enlarged** (cropped SVG dead space, un-overlapped the numbered pins, ambient patina aura) — reads much bigger on both desktop and mobile.
+- DONE: **SEO layer**: RoofingContractor JSON-LD (honest fields only — no address/hours/license until confirmed), canonical + og:url/og:image/twitter card. NOTE: absolute URLs point at aa-premier-roofing.vercel.app — **swap to the final domain at cutover** (marked with a comment in index.html `<head>`).
+- DONE: **Perf**: below-fold images lazy-load; phones get the 0.5MB hero video instead of 5MB; Save-Data users get the poster.
+
 ## Recon update (07-01-2026) — folded in from their live site
 - DONE: **Real before/after slider** using their own home transformation (roof + exterior). Ask Anthony & Ashton for MORE before/after pairs and I'll add them.
 - DONE: **Real owner/crew photo** in the story section (pulled from their site). Confirm it's OK to use and send a higher-res copy if they have one.
