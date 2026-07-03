@@ -2,6 +2,13 @@
 
 The front end is a complete, sale-in-hand demo. Everything below is **real-client data to confirm/supply before going live**. Nothing here blocks showing the demo. Items are honest placeholders, not invented facts.
 
+## Update (07-03-2026, round 2) — old-site parity + cross-browser fixes, deployed
+- DONE: **Safari nav overlap fixed.** The brand tagline was colliding with the nav links at ~1370px windows; the nav now sheds the tagline (≤1400px) and the phone number (≤1080px) before anything can collide.
+- DONE: **Service-area map fixed.** The embed was geocoding "Dallas–Fort Worth metroplex" to a world view; it now centers on DFW via coordinates.
+- DONE: **Legal pages** (privacy.html, terms.html, accessibility.html), styled in-system, linked in the footer. Honest generic content, no invented facts. Old site's "Refund Policy" was a Wix template artifact and intentionally skipped: refunds/warranty belong in their written contract.
+- DONE: **Blog** at /blog/ with two real DFW guides (hail-claim walkthrough, replace-vs-repair) with Article JSON-LD, linked in footer as "Roofing guides". Replaces the old Wix filler blog. OFFER: monthly guide as a content add-on.
+- DONE: **Online-booking hook (dormant).** Set `data-booking-url` on `<body>` (index.html) to a Cal.com (free) or Calendly scheduling link and "Book a time online" buttons appear in the hero, storm card, and lead form automatically. NEEDS: owners to create the scheduling account with their 4 service types; until then the lead form with preferred day/time covers the intent.
+
 ## Update (07-03-2026) — pre-send polish pass, deployed to production
 - DONE: **Booking parity with their old Wix site.** Lead form now has optional "Preferred day" + "Best time" fields (covers the Wix Bookings pick-a-date intent), and the service dropdown now includes **Holiday lighting** and **Junk removal** (both were bookable services on their old site). Webhook payload now posts `{name, phone, email, address, service, preferredDate, preferredTime, message, source, submittedAt}`.
 - DONE: **Mobile sticky action bar** (Call now + Free inspection) slides in after the hero on phones, where the nav phone/CTA collapse behind the burger.
