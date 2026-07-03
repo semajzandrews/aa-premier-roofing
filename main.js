@@ -74,11 +74,17 @@
     reveals.forEach(function (el) { io.observe(el); });
   }
 
-  /* ---------- Hero video: pause offscreen, ensure playback ---------- */
+  /* ---------- Hero video: right-size source, pause offscreen, ensure playback ---------- */
   var vid = document.getElementById("heroVid");
   if (vid) {
-    if (reduce) { try { vid.pause(); vid.removeAttribute("autoplay"); } catch (e) {} }
+    var saveData = !!(navigator.connection && navigator.connection.saveData);
+    if (reduce || saveData) {
+      try { vid.pause(); vid.removeAttribute("autoplay"); } catch (e) {}
+      if (saveData) { var h = vid.closest(".hero"); if (h) h.classList.add("no-video"); }
+    }
     else {
+      // phones get the 0.5MB encode instead of the 5MB one
+      if (window.matchMedia("(max-width: 640px)").matches) { vid.src = "assets/video/hero-360.mp4"; vid.load(); }
       var tryPlay = vid.play(); if (tryPlay && tryPlay.catch) tryPlay.catch(function () {});
       if ("IntersectionObserver" in window) {
         new IntersectionObserver(function (en) {
