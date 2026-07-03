@@ -11,9 +11,13 @@
   var yr = document.getElementById("yr");
   if (yr) yr.textContent = new Date().getFullYear();
 
-  /* ---------- Nav scrolled state ---------- */
+  /* ---------- Nav scrolled state + mobile action bar ---------- */
   var nav = document.getElementById("nav");
-  function onScroll() { if (nav) nav.classList.toggle("scrolled", window.scrollY > 24); }
+  var mobBar = document.getElementById("mobBar");
+  function onScroll() {
+    if (nav) nav.classList.toggle("scrolled", window.scrollY > 24);
+    if (mobBar) mobBar.classList.toggle("show", window.scrollY > window.innerHeight * 0.7);
+  }
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
