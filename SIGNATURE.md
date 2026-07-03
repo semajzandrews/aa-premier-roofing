@@ -4,7 +4,7 @@
 **Client:** AA Premier Roofing & Construction (legal: AA Consulting TX) — real BWYW client, inbound referral
 **Location:** Dallas–Fort Worth metroplex, TX
 **Owners:** Anthony (940) 783-2238 · Ashton (214) 205-6991 · aaconsultingtx@gmail.com
-**Verified socials:** IG @aaconsultingtx · FB facebook.com/61578391972084
+**Verified socials:** IG @aapremierroofing (verified live 07-03-2026; old @aaconsultingtx is dead/404) · FB facebook.com/61578391972084
 **Build date:** 07-01-2026
 **Stack:** Hand-authored static site (HTML/CSS/JS), fully self-hosted assets, static-export ready. Serves via `python3 -m http.server`.
 
