@@ -181,12 +181,16 @@
     <div class="anatomy-grid">
       <!-- sticky cross-section -->
       <div class="anatomy-stage">
-        <svg class="anatomy-svg" id="roofSvg" viewBox="0 0 640 470" role="img" aria-label="Cross-section of a premium roof system showing decking, underlayment, ice and water shield, shingles, and ridge cap with ventilation.">
+        <svg class="anatomy-svg" id="roofSvg" viewBox="52 192 478 224" role="img" aria-label="Cross-section of a premium roof system showing decking, underlayment, ice and water shield, shingles, and ridge cap with ventilation.">
           <defs>
             <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c69a63"/><stop offset="1" stop-color="#a97e48"/></linearGradient>
             <linearGradient id="shingle" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#465666"/><stop offset="1" stop-color="#2f3b48"/></linearGradient>
             <linearGradient id="mem" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c887c"/><stop offset="1" stop-color="#1f5e58"/></linearGradient>
+            <radialGradient id="aura" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#2c887c" stop-opacity=".2"/><stop offset=".65" stop-color="#2c887c" stop-opacity=".07"/><stop offset="1" stop-color="#2c887c" stop-opacity="0"/></radialGradient>
           </defs>
+
+          <!-- ambient aura anchoring the cross-section -->
+          <ellipse cx="291" cy="308" rx="238" ry="112" fill="url(#aura)"/>
 
           <!-- L1 DECKING -->
           <g class="roof-layer" data-layer="1">
@@ -234,12 +238,12 @@
           </g>
 
           <!-- numbered pins -->
-          <g font-family="'Cabinet Grotesk',sans-serif" font-weight="800" font-size="15">
-            <g class="roof-label" data-layer="1"><circle cx="86" cy="375" r="14" fill="#1f5e58"/><text x="86" y="380" text-anchor="middle" fill="#fff">1</text></g>
-            <g class="roof-label" data-layer="2"><circle cx="86" cy="341" r="14" fill="#1f5e58"/><text x="86" y="346" text-anchor="middle" fill="#fff">2</text></g>
-            <g class="roof-label" data-layer="3"><circle cx="86" cy="319" r="14" fill="#1f5e58"/><text x="86" y="324" text-anchor="middle" fill="#fff">3</text></g>
-            <g class="roof-label" data-layer="4"><circle cx="86" cy="266" r="14" fill="#1f5e58"/><text x="86" y="271" text-anchor="middle" fill="#fff">4</text></g>
-            <g class="roof-label" data-layer="5"><circle cx="86" cy="230" r="14" fill="#1f5e58"/><text x="86" y="235" text-anchor="middle" fill="#fff">5</text></g>
+          <g font-family="'Cabinet Grotesk',sans-serif" font-weight="800" font-size="13">
+            <g class="roof-label" data-layer="1"><circle cx="86" cy="375" r="12" fill="#1f5e58"/><text x="86" y="379" text-anchor="middle" fill="#fff">1</text></g>
+            <g class="roof-label" data-layer="2"><circle cx="86" cy="343" r="12" fill="#1f5e58"/><text x="86" y="347" text-anchor="middle" fill="#fff">2</text></g>
+            <g class="roof-label" data-layer="3"><circle cx="86" cy="315" r="12" fill="#1f5e58"/><text x="86" y="319" text-anchor="middle" fill="#fff">3</text></g>
+            <g class="roof-label" data-layer="4"><circle cx="86" cy="266" r="12" fill="#1f5e58"/><text x="86" y="270" text-anchor="middle" fill="#fff">4</text></g>
+            <g class="roof-label" data-layer="5"><circle cx="86" cy="228" r="12" fill="#1f5e58"/><text x="86" y="232" text-anchor="middle" fill="#fff">5</text></g>
           </g>
         </svg>
       </div>
