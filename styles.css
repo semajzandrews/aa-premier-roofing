@@ -425,6 +425,8 @@ html.no-js .astep{opacity:1;min-height:auto;padding-block:24px}
   background:#fff;color:var(--tol);transition:border-color .25s,box-shadow .25s;
 }
 .field input:focus,.field select:focus,.field textarea:focus{outline:0;border-color:var(--patina);box-shadow:0 0 0 3px rgba(31,94,88,.14)}
+.field .opt{font-weight:400;color:var(--tol-mute)}
+.field input[type="date"]{appearance:none;-webkit-appearance:none;min-height:calc(1.65em + 1.7rem + 2px);color-scheme:light}
 .field textarea{resize:vertical;min-height:92px}
 .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .form small{display:block;margin-top:8px;color:var(--tol-mute);font-size:.8rem}
