@@ -470,7 +470,10 @@ html.no-js .astep{opacity:1;min-height:auto;padding-block:24px}
    ============================================================ */
 .foot{background:var(--ink);color:var(--tod);border-top:1px solid var(--line-d)}
 .foot .wrap{padding-block:clamp(52px,6vw,80px)}
-.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px 24px}
+/* brand column widened (1.4->1.5fr) + roomier column gap so the "Roofing & Construction"
+   tagline isn't crowding the Services column — widening the column, not the gap, is what
+   actually adds the space (a bigger gap alone just shrinks the column and cancels out). */
+.foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:36px 48px}
 .foot-brand .brand{margin-bottom:16px}
 .foot-brand p{color:var(--tod-mute);font-size:.95rem;max-width:34ch}
 .foot-social{display:flex;gap:12px;margin-top:20px}
