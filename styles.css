@@ -565,3 +565,48 @@ html.no-js .astep{opacity:1;min-height:auto;padding-block:24px}
   .astep{opacity:1!important}
   .scroll-cue .dot::before{animation:none}
 }
+
+/* ---------- Call or Text chooser ----------
+   Same buttons, same slate card language as the rest of the site — the only
+   change is that tapping the number now offers Text as well as Call, because
+   a photo of the hail damage is most of the inspection. Root class is .cot
+   (never .wrap, which is the page container). */
+.cot{position:relative;display:inline-flex}
+.cot--block{display:flex;width:100%}
+.cot--block > .cot-trigger{width:100%;justify-content:center}
+.cot-trigger{font:inherit;cursor:pointer}
+/* only the bare triggers (nav number, big CTA number) get the button reset —
+   stripping background and border off a .btn trigger would cost it its look */
+.cot-trigger:not(.btn){background:none;border:0;color:inherit;padding:0}
+.cot-trigger.nav-phone:hover{color:#fff}
+.cot-menu{
+  position:absolute;top:calc(100% + 12px);right:0;z-index:80;
+  width:max-content;min-width:262px;max-width:min(320px,calc(100vw - 2rem));
+  background:var(--slate-800);border:1px solid var(--line-d);border-radius:var(--r);
+  padding:6px;display:grid;gap:2px;
+  box-shadow:0 24px 48px -20px rgba(0,0,0,.7);
+  opacity:0;transform:translateY(-8px);pointer-events:none;
+  transition:opacity .32s var(--ease),transform .32s var(--ease);
+}
+.cot--up .cot-menu{top:auto;bottom:calc(100% + 12px);transform:translateY(8px)}
+.cot--left .cot-menu{right:auto;left:0}
+.cot-menu[data-open="true"]{opacity:1;transform:none;pointer-events:auto}
+.cot-menu a{
+  display:grid;grid-template-columns:auto 1fr;align-items:center;gap:13px;
+  padding:12px 13px;border-radius:calc(var(--r) - 6px);color:var(--tod);
+  transition:background .3s var(--ease),color .3s var(--ease);
+}
+.cot-menu a:hover{background:rgba(84,183,166,.14);color:#fff}
+.cot-menu svg{width:19px;height:19px;color:var(--patina-glow)}
+.cot-menu b{display:block;font-family:var(--font-display);font-weight:700;font-size:.98rem;letter-spacing:-.01em}
+.cot-menu small{display:block;font-size:.8rem;line-height:1.4;color:rgba(232,235,231,.62);margin-top:2px}
+/* the nav trigger drops its number under 560px so it can never overflow a
+   375px viewport; the sticky bar keeps its label, which is short already */
+@media (max-width:559px){
+  .cot-trigger.nav-phone .cot-label{display:none}
+}
+/* inside the sticky bar and the mobile menu the chooser is anchored left and
+   sized to the viewport rather than to its (narrow) trigger */
+.cot--block .cot-menu,.mob-bar .cot-menu{left:0;right:auto;width:max-content;min-width:min(280px,calc(100vw - 2.5rem))}
+.mob-bar .cot{flex:1}
+.mob-bar .cot-trigger{width:100%}

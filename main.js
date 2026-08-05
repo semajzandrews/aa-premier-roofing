@@ -171,6 +171,70 @@
     }
   }
 
+  /* ---------- Call or Text chooser ----------
+     Plenty of homeowners will send a photo of the hail damage who would never
+     dial, and on a roof that photo is most of the inspection. Each phone CTA
+     opens a two-choice menu instead of dialing straight away. */
+  var choosers = [].slice.call(document.querySelectorAll("[data-cot]"));
+  choosers.forEach(function (cot) {
+    var trigger = cot.querySelector(".cot-trigger");
+    var menu = cot.querySelector(".cot-menu");
+    if (!trigger || !menu) return;
+    function set(open) {
+      menu.setAttribute("data-open", open ? "true" : "false");
+      trigger.setAttribute("aria-expanded", open ? "true" : "false");
+    }
+    set(false);
+    trigger.addEventListener("click", function (e) {
+      e.preventDefault();
+      var open = menu.getAttribute("data-open") !== "true";
+      choosers.forEach(function (other) {
+        var m = other.querySelector(".cot-menu");
+        var t = other.querySelector(".cot-trigger");
+        if (m && t) { m.setAttribute("data-open", "false"); t.setAttribute("aria-expanded", "false"); }
+      });
+      set(open);
+    });
+    menu.addEventListener("click", function () { set(false); });
+  });
+  if (choosers.length) {
+    document.addEventListener("mousedown", function (e) {
+      choosers.forEach(function (cot) {
+        if (!cot.contains(e.target)) {
+          var m = cot.querySelector(".cot-menu");
+          var t = cot.querySelector(".cot-trigger");
+          if (m && t) { m.setAttribute("data-open", "false"); t.setAttribute("aria-expanded", "false"); }
+        }
+      });
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key !== "Escape") return;
+      choosers.forEach(function (cot) {
+        var m = cot.querySelector(".cot-menu");
+        var t = cot.querySelector(".cot-trigger");
+        if (m && t) { m.setAttribute("data-open", "false"); t.setAttribute("aria-expanded", "false"); }
+      });
+    });
+  }
+
+  /* ---------- Phone field mask ----------
+     Same shape the site prints, (940) 783-2238, so what a visitor reads is
+     what they type back. */
+  var phoneField = document.getElementById("phone");
+  if (phoneField) {
+    phoneField.addEventListener("input", function () {
+      var d = phoneField.value.replace(/\D+/g, "");
+      if (d.length === 11 && d.charAt(0) === "1") d = d.slice(1);
+      d = d.slice(0, 10);
+      var out = "";
+      if (d.length === 0) out = "";
+      else if (d.length < 4) out = "(" + d;
+      else if (d.length <= 6) out = "(" + d.slice(0, 3) + ") " + d.slice(3);
+      else out = "(" + d.slice(0, 3) + ") " + d.slice(3, 6) + "-" + d.slice(6);
+      phoneField.value = out;
+    });
+  }
+
   /* ---------- Lead form (CRM-ready) ---------- */
   var form = document.getElementById("leadForm");
   if (form) {
